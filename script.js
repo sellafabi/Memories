@@ -12,6 +12,7 @@ const galleries = {
       "images/assets/Jollibee P.jpg"
     ]
   },
+
   mcdo: {
     title: "McDo",
     images: [
@@ -26,6 +27,7 @@ const galleries = {
       "images/assets/McDo P.jpg"
     ]
   },
+
   christmas: {
     title: "Christmas Party 2025",
     images: [
@@ -48,18 +50,26 @@ const galleries = {
   }
 };
 
-if (window.location.search) {
+/* ✅ ONLY RUN THIS ON gallery.html */
+const galleryDiv = document.querySelector(".gallery");
+const titleEl = document.getElementById("title");
+
+if (galleryDiv && titleEl) {
   const params = new URLSearchParams(window.location.search);
   const type = params.get("type");
-
   const data = galleries[type];
-  document.getElementById("title").textContent = data.title;
 
-  const galleryDiv = document.querySelector(".gallery");
+  if (!data) {
+    titleEl.textContent = "Gallery not found";
+    return;
+  }
+
+  titleEl.textContent = data.title;
 
   data.images.forEach(img => {
     const image = document.createElement("img");
     image.src = img;
+    image.alt = data.title;
     galleryDiv.appendChild(image);
   });
 }
