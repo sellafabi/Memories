@@ -5,177 +5,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Memories</title>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Patrick Hand', cursive;
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Patrick Hand', cursive;
+    }
 
-  body {
-  min-height: 100vh;
-  background:
-    linear-gradient(
-      rgba(255, 248, 235, 0.35),
-      rgba(255, 248, 235, 0.35)
-    ),
-    url("images/assets/Beige Brown Retro Aesthetic Holiday Recap Photo Collage Scrapbook.png")
-    no-repeat center center / cover;
-}
+    body {
+      background: #fff8eb;
+    }
 
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(
+          rgba(255, 248, 235, 0.35),
+          rgba(255, 248, 235, 0.35)
+        ),
+        url("images/assets/Beige Brown Retro Aesthetic Holiday Recap Photo Collage Scrapbook.png")
+        no-repeat center center / cover;
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-  }
+      display: flex;
+      flex-direction: column;
+    }
 
-  header h1 {
-    color: #5b4636;
-  }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
 
-  nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #5b4636;
-    font-weight: bold;
-  }
+    header h1 {
+      color: #5b4636;
+    }
 
-  .hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #5b4636;
+      font-weight: bold;
+    }
 
-  .hero-box {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px;
-    border-radius: 20px;
-    max-width: 500px;
-  }
+    .hero-box {
+      margin: auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 520px;
+      text-align: center;
+    }
 
-  .hero-box h2 {
-    font-size: 2.2rem;
-    color: #4a3728;
-  }
+    .hero-box h2 {
+      font-size: 2.2rem;
+      color: #4a3728;
+    }
 
-  .hero-box p {
-    margin: 15px 0 25px;
-    color: #6b5747;
-  }
+    .hero-box p {
+      margin: 15px 0 25px;
+      color: #6b5747;
+    }
 
-  button {
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    background-color: #c4a484;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+    button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background-color: #c4a484;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
-  button:hover {
-    background-color: #a88b6a;
-  }
+    button:hover {
+      background-color: #a88b6a;
+    }
 
-  .gallery {
-    padding: 60px 40px;
-    text-align: center;
-  }
+    /* GALLERY */
+    .gallery {
+      padding: 80px 40px;
+      text-align: center;
+    }
 
-  .gallery h2 {
-    font-size: 2rem;
-    color: #4a3728;
-    margin-bottom: 30px;
-  }
+    .gallery h2 {
+      font-size: 2rem;
+      color: #4a3728;
+      margin-bottom: 40px;
+    }
 
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-  .gallery-grid img {
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-</style>
-
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Holiday Recap</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Gallery</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-  <section class="hero">
+    <header>
+      <h1>Holiday Recap</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
     <div class="hero-box">
       <h2>Welcome to My Memories</h2>
       <p>A collection of moments, travels, and friendships worth remembering.</p>
-      <button>Explore</button>
+      <button onclick="scrollToGallery()">Explore</button>
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <h2>My Memories</h2>
+
+    <div class="gallery-grid">
+
+      <!-- DazenG Landscape -->
+      <img src="images/assets/ChirstmasParty2025 DazenG L (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG L (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG L (4).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG L (5).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG L.jpg" onclick="openImage(this.src)">
+
+      <!-- PG Landscape -->
+      <img src="images/assets/ChirstmasParty2025 PG L (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 PG L.jpg" onclick="openImage(this.src)">
+
+      <!-- Jollibee Landscape -->
+      <img src="images/assets/Jollibee L.jpg" onclick="openImage(this.src)">
+
+      <!-- McDo Landscape -->
+      <img src="images/assets/McDo L (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo L (4).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo L (5).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo L (6).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo L.jpg" onclick="openImage(this.src)">
+
+      <!-- DazenG Portrait -->
+      <img src="images/assets/ChirstmasParty2025 DazenG P (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (4).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (5).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (6).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (7).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P (8).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 DazenG P.jpg" onclick="openImage(this.src)">
+
+      <!-- PG Portrait -->
+      <img src="images/assets/ChirstmasParty2025 PG P (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 PG P (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 PG P (4).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 PG P (5).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/ChirstmasParty2025 PG P.jpg" onclick="openImage(this.src)">
+
+      <!-- Jollibee Portrait -->
+      <img src="images/assets/Jollibee P (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/Jollibee P (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/Jollibee P.jpg" onclick="openImage(this.src)">
+
+      <!-- McDo Portrait -->
+      <img src="images/assets/McDo P (2).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo P (3).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo P (4).jpg" onclick="openImage(this.src)">
+      <img src="images/assets/McDo P.jpg" onclick="openImage(this.src)">
+
     </div>
   </section>
 
-  <section class="gallery">
-  <h2>My Memories</h2>
+  <!-- SCRIPT -->
+  <script>
+    function scrollToGallery() {
+      document.getElementById("gallery").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
 
-  <div class="gallery-grid">
-    <img src="images/assets/ChirstmasParty2025 DazenG L (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG L (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG L (4).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG L (5).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG L.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG L (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG L.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/Jollibee L.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo L (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo L (4).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo L (5).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo L (6).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo L.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (4).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (5).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (6).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (7).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P (8).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 DazenG P.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG P (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG P (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG P (4).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG P (5).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/ChirstmasParty2025 PG P.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/Jollibee P (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/Jollibee P (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/Jollibee P.jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo P (2).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo P (3).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo P (4).jpg" onclick="openImage(this.src)">
-    <img src="images/assets/McDo P.jpg" onclick="openImage(this.src)">
-  </div>
-</section>
+    function openImage(src) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.background = "rgba(0,0,0,0.85)";
+      overlay.style.display = "flex";
+      overlay.style.alignItems = "center";
+      overlay.style.justifyContent = "center";
+      overlay.style.cursor = "pointer";
 
+      const img = document.createElement("img");
+      img.src = src;
+      img.style.maxWidth = "90%";
+      img.style.maxHeight = "90%";
+      img.style.borderRadius = "15px";
+
+      overlay.appendChild(img);
+      overlay.onclick = () => document.body.removeChild(overlay);
+      document.body.appendChild(overlay);
+    }
+  </script>
 
 </body>
 </html>
