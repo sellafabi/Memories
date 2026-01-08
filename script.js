@@ -1,75 +1,15 @@
-function openGallery(type) {
-  window.location.href = `gallery.html?type=${type}`;
-}
+const images = document.querySelectorAll(".gallery img");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.getElementById("close");
 
-const galleries = {
-  jollibee: {
-    title: "Jollibee",
-    images: [
-      "images/assets/Jollibee L.jpg",
-      "images/assets/Jollibee P (2).jpg",
-      "images/assets/Jollibee P (3).jpg",
-      "images/assets/Jollibee P.jpg"
-    ]
-  },
-
-  mcdo: {
-    title: "McDo",
-    images: [
-      "images/assets/McDo L (3).jpg",
-      "images/assets/McDo L (4).jpg",
-      "images/assets/McDo L (5).jpg",
-      "images/assets/McDo L (6).jpg",
-      "images/assets/McDo L.jpg",
-      "images/assets/McDo P (2).jpg",
-      "images/assets/McDo P (3).jpg",
-      "images/assets/McDo P (4).jpg",
-      "images/assets/McDo P.jpg"
-    ]
-  },
-
-  christmas: {
-    title: "Christmas Party 2025",
-    images: [
-      "images/assets/ChirstmasParty2025 DazenG L (2).jpg",
-      "images/assets/ChirstmasParty2025 DazenG L (3).jpg",
-      "images/assets/ChirstmasParty2025 DazenG L (4).jpg",
-      "images/assets/ChirstmasParty2025 DazenG L (5).jpg",
-      "images/assets/ChirstmasParty2025 DazenG L.jpg",
-      "images/assets/ChirstmasParty2025 PG L (2).jpg",
-      "images/assets/ChirstmasParty2025 PG L.jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (2).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (3).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (4).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (5).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (6).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (7).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P (8).jpg",
-      "images/assets/ChirstmasParty2025 DazenG P.jpg"
-    ]
-  }
-};
-
-/* ✅ ONLY RUN THIS ON gallery.html */
-const galleryDiv = document.querySelector(".gallery");
-const titleEl = document.getElementById("title");
-
-if (galleryDiv && titleEl) {
-  const params = new URLSearchParams(window.location.search);
-  const type = params.get("type");
-  const data = galleries[type];
-
-  if (!data) {
-    titleEl.textContent = "Gallery not found";
-    return;
-  }
-
-  titleEl.textContent = data.title;
-
-  data.images.forEach(img => {
-    const image = document.createElement("img");
-    image.src = img;
-    image.alt = data.title;
-    galleryDiv.appendChild(image);
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
   });
-}
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
